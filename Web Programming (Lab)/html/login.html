@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Julee">
+  <link rel="stylesheet" href="../css/home.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="main-form">
+    <div class="main">  	
+      <input type="checkbox" id="chk" aria-hidden="true">
+        <div class="signup">
+          <form>
+            <label for="chk" aria-hidden="true" id="signup-label">Sign up</label>
+            <input type="text" name="txt" placeholder="Username" required="">
+            <input type="email" name="email" id="emails" placeholder="Email" required="Fill out the email field">
+            <input type="password" name="pswd-s" id="passwords" placeholder="Password" required="Fill out the  field">
+            <button type='button'>Sign up</button>
+          </form>
+        </div>
+
+        <div class="login">
+          <form>
+            <div class="errormsg">
+              Please enter valid input!!
+            </div>
+            <label for="chk" aria-hidden="true" id="login-label">Login</label>
+            <input type="text" name="username-l" id="usernamel" placeholder="Username" required="Fill out the username field">
+            <input type="password" name="pswd-l" id='passwordl' placeholder="Password" required="Fill out the username field">
+            <button type='button' onclick=login()>Login</button>
+            <a href="../html/home.html">Back to Home Page</a>
+          </form>
+        </div>
+    </div>
+  </div>
+  <script src="../js/login.js"></script>
+</body>
+
+</html>
