@@ -25,10 +25,11 @@ void computeLPSArray(string pattern, int lps[]) {
     }
 }
 
-void KMP(string text, string pattern) {
+int KMP(string text, string pattern) {
     int n = text.size();
     int m = pattern.size();
     int lps[m];
+    int count = 0;
 
     computeLPSArray(pattern, lps);
 
@@ -42,7 +43,8 @@ void KMP(string text, string pattern) {
         }
 
         if (j == m) {
-            cout << "Pattern found at index: " << i - j << endl;
+            // cout << "Pattern found at index: " << i - j << endl;
+            count++;
             j = lps[j - 1];
         } else if (i < n && pattern[j] != text[i]) {
             if (j != 0) {
@@ -52,14 +54,16 @@ void KMP(string text, string pattern) {
             }
         }
     }
+    return count;
 }
 
 int main() {
-    string text = "ABCADAB";
-    string pattern = "ADA";
+    string text = "sadasda";
+    string pattern = "sda";
     cout << "Text: " << text << endl;
     cout << "Pattern: " << pattern << endl;
-    cout << "Pattern found at indices: ";
-    KMP(text, pattern);
+    cout << "Number of Occurences: ";
+    int x = KMP(text, pattern);
+    cout<<x<<endl;
     return 0;
 }
