@@ -17,7 +17,6 @@ int gcd(int a, int b)
 double calculateArea(vector<Point> &vertices)
 {
     int numVertices = vertices.size();
-
     int numInteriorPoints = 0, numBoundaryPoints = 0;
     for (int i = 0; i < numVertices; i++)
     {
@@ -27,7 +26,6 @@ double calculateArea(vector<Point> &vertices)
         numBoundaryPoints += gcd(dx, dy);
     }
     double area = (numInteriorPoints + numBoundaryPoints / 2.0 - 1);
-
     return area;
 }
 
