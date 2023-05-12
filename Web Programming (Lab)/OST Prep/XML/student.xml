@@ -1,0 +1,19 @@
+<?xml-stylesheet type = "text/xsl"
+href="students.xsl"?>
+<frands>
+	<frand>
+		<name>Aarya Tiwari</name>
+		<age>19</age>
+		<DOB>12-11-03</DOB>
+	</frand>
+	<frand>
+		<name>Dhairya Satra</name>
+		<age>20</age>
+		<DOB>31-10-03</DOB>
+	</frand>
+	<frand>
+		<name>Dhruv Sharma</name>
+		<age>5</age>
+		<DOB>29-02-03</DOB>
+	</frand>
+</frands>

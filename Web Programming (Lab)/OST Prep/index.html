@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <head charset="utf-8">
+        <link rel="stylesheet" href="./style.css"> 
+        <title>title</title>
+    </head>
+
+<body>
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" />
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" />
+
+        <button type="submit">Submit</button>
+        <a id="link" href="#">Link</a>
+    </form>
+
+    <script>
+        const form = document.getElementById('myForm');
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const age = document.getElementById('age').value;
+        const name1 = document.getElementById('name').name;
+        const email1 = document.getElementById('email').name;
+        const age1 = document.getElementById('age').name;
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const formData = {};
+            formData[name1] = name;
+            formData[email1] = email;
+            formData[age1] = age;
+            const jsonData = JSON.stringify(formData);
+            console.log(formData);
+        });
+    </script>
+</body>
+
+</html>
